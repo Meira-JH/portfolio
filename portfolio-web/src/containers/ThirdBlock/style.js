@@ -48,7 +48,7 @@ export const KnowledgeTitle = styled.div`
   justify-self: center;
   width: 85%;
   font-size: ${textSize.xl};
-  font-weight: 700;
+  font-weight: 500;
   text-align: center;
 
   @media ${device.laptopL} {
@@ -123,7 +123,7 @@ export const Title = styled.span`
   align-self: center;
   justify-self: center;
   width: 100%;
-  font-size: ${textSize.xxl};
+  font-size: ${textSize.xl};
   font-weight: 700;
   text-align: center;
   line-height: 1.4;

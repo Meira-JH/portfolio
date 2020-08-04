@@ -5,6 +5,7 @@ import iconWhatsApp from "./../../img/whatsapp.svg";
 
 export const FirstBlockWrapper = styled.div`
   height: 68vh;
+  min-height: 490px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -12,6 +13,15 @@ export const FirstBlockWrapper = styled.div`
   align-items: center;
   padding-top: 3vw;
 `;
+
+export const ContentLimit = styled.div`
+  max-width: 1400px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+`
 
 export const Title = styled.span`
   font-size: 37px;
@@ -30,6 +40,7 @@ export const DrawWrapper = styled.div`
   width: 11vw;
   height: 11vw;
   min-width: 130px;
+  max-width: 190px;
   min-height: 130px;
   max-height: 190px;
   background-color: #0496ff;
@@ -48,9 +59,10 @@ export const Draw = styled.img`
 `;
 
 export const SocialNetworks = styled.div`
-  width: 15%;
+  width: 25%;
   min-height: 27px;
   min-width: 160px;
+  max-width: 300px;
   flex-grow: 1;
   display: flex;
   align-items: center;
@@ -63,8 +75,8 @@ export const IconWrapper = styled.div`
   height: 2vw;
   min-height: 27px;
   min-width: 27px;
-  max-width: 40px;
-  max-height: 40px;
+  max-width: 30px;
+  max-height: 30px;
   padding: 10px;
   display: flex;
   justify-content: center;
@@ -78,7 +90,12 @@ export const IconWrapper = styled.div`
   -webkit-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   &:hover {
-    border: 2px #d81159 solid;
+    border: 2px #ffff solid;
+    box-shadow: 0 0 6px 2px #FFBC42;
+    background-color: #FFBC42;
+  }
+  &:focus {
+
   }
 `;
 
@@ -98,7 +115,7 @@ export const GitHub = styled.img`
   -webkit-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   &:hover {
-    background-color: #d81159;
+    background-color: #ffff;
   }
 `;
 export const WhatsApp = styled.img`
@@ -117,7 +134,7 @@ export const WhatsApp = styled.img`
   -webkit-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   &:hover {
-    background-color: #d81159;
+    background-color: #ffff;
   }
 `;
 export const Linkedin = styled.img`
@@ -136,6 +153,6 @@ export const Linkedin = styled.img`
   -webkit-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   &:hover {
-    background-color: #d81159;
+    background-color: #ffff;
   }
 `;

@@ -1,35 +1,79 @@
 import React from "react";
 import {
-  ThirdBlockWrapper,
-  Text,
-  KnowledgeWrapper,
-  KnowledgeTitle,
+  FourthBlockWrapper,
+  ProjectsWrapper,
   Title,
-  FrontEnd,
-  BackEnd
+  ProjectRight,
+  ProjectLeft,
+  IconWrapper,
+  Icon,
+  IconPhone,
+  DescriptionLeft,
+  DescriptionRight,
+  DescriptionTitleRight,
+  DescriptionSubTitleLeft,
+  DescriptionSubTitleRight,
+  DescriptionButton,
+  DescriptionTextRight,
+  DescriptionTitleLeft,
+  DescriptionTextLeft,
 } from "./style";
-import { knowledge } from "../../Layout/Texts";
+import IconComputer from "../../img/spotenu-fullstack-project.web.app_(iPad).png";
+import IconTablet from "../../img/printtela2.png";
+import IconLaptop from "../../img/localhost_3000_(iPad) (2).png";
+import { spotenu, futureEats, fourEddit } from "../../Layout/Texts";
 
-
-const ThirdBlock = (props) => {
-
+const FourthBlock = (props) => {
   return (
-    <ThirdBlockWrapper>
-      <KnowledgeWrapper>
-        <KnowledgeTitle>
-          <span> {knowledge.title} </span>
-        </KnowledgeTitle>
-        <FrontEnd>
-          <Title> {knowledge.titleFrontEnd} </Title>
-          <Text> {knowledge.textFrontEnd} </Text>
-        </FrontEnd>
-        <BackEnd>
-          <Title> {knowledge.titleBackEnd} </Title>
-          <Text> {knowledge.textBackEnd} </Text>
-        </BackEnd>
-      </KnowledgeWrapper>
-    </ThirdBlockWrapper>
+    <FourthBlockWrapper>
+      <ProjectsWrapper>
+        <Title>Meus Projetos</Title>
+
+        <ProjectRight>
+          <IconWrapper>
+            <Icon src={IconComputer} />
+          </IconWrapper>
+          <DescriptionRight>
+            <DescriptionTitleRight> {spotenu.title} </DescriptionTitleRight>
+            <DescriptionSubTitleRight>
+              {" "}
+              {spotenu.subtitle}{" "}
+            </DescriptionSubTitleRight>
+            <DescriptionTextRight> {spotenu.text} </DescriptionTextRight>
+            <DescriptionButton>GitHub</DescriptionButton>
+          </DescriptionRight>
+        </ProjectRight>
+        <ProjectLeft>
+          <IconWrapper>
+            <IconPhone src={IconTablet} />
+          </IconWrapper>
+          <DescriptionLeft>
+            <DescriptionTitleLeft> {futureEats.title} </DescriptionTitleLeft>
+            <DescriptionSubTitleLeft>
+              {" "}
+              {futureEats.subtitle}{" "}
+            </DescriptionSubTitleLeft>
+            <DescriptionTextLeft> {futureEats.text} </DescriptionTextLeft>
+            <DescriptionButton>GitHub</DescriptionButton>
+          </DescriptionLeft>
+        </ProjectLeft>
+        <ProjectRight>
+          <IconWrapper>
+            <Icon src={IconLaptop} />
+          </IconWrapper>
+          <DescriptionRight>
+            <DescriptionTitleRight> {fourEddit.title} </DescriptionTitleRight>
+            <DescriptionSubTitleRight>
+              {" "}
+              {fourEddit.subtitle}{" "}
+            </DescriptionSubTitleRight>
+            <DescriptionTextRight> {fourEddit.text} </DescriptionTextRight>
+            <DescriptionButton>GitHub</DescriptionButton>
+          </DescriptionRight>
+        </ProjectRight>
+      </ProjectsWrapper>
+    </FourthBlockWrapper>
   );
 };
 
-export default ThirdBlock;
+export default FourthBlock;

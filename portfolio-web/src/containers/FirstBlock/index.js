@@ -1,6 +1,7 @@
 import React from "react";
 import {
   FirstBlockWrapper,
+  ContentLimit,
   Title,
   Subtitle,
   DrawWrapper,
@@ -14,26 +15,27 @@ import {
 import iconDraw from "../../img/desenhojoao.svg";
 import { opening } from "../../Layout/Texts";
 
-
 const FirstBlock = (props) => {
   return (
     <FirstBlockWrapper>
-      <Title> {opening.title} </Title>
-      <Subtitle> {opening.subtitle} </Subtitle>
-      <DrawWrapper>
-        <Draw src={iconDraw} />
-      </DrawWrapper>
-      <SocialNetworks>
-        <IconWrapper>
-          <GitHub/>
-        </IconWrapper>
-        <IconWrapper>
-          <WhatsApp src />
-        </IconWrapper>
-        <IconWrapper>
-          <Linkedin src />
-        </IconWrapper>
-      </SocialNetworks>
+      <ContentLimit>
+        <Title> {opening.title} </Title>
+        <Subtitle> {opening.subtitle} </Subtitle>
+        <DrawWrapper>
+          <Draw src={iconDraw} />
+        </DrawWrapper>
+        <SocialNetworks>
+          <IconWrapper>
+            <GitHub />
+          </IconWrapper>
+          <IconWrapper>
+            <WhatsApp src />
+          </IconWrapper>
+          <IconWrapper>
+            <Linkedin src />
+          </IconWrapper>
+        </SocialNetworks>
+      </ContentLimit>
     </FirstBlockWrapper>
   );
 };
