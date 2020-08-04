@@ -3,6 +3,7 @@ import { PortfolioWrapper } from './style'
 import FirstBlock from '../../containers/FirstBlock'
 import SecondBlock from '../../containers/SecondBlock'
 import ThirdBlock from '../../containers/ThirdBlock'
+import FourthBlock from '../../containers/FourthBlock'
 
 
 const Portfolio = (props) => {
@@ -12,6 +13,7 @@ const Portfolio = (props) => {
             <FirstBlock/>
             <SecondBlock/>
             <ThirdBlock />
+            <FourthBlock />
         </PortfolioWrapper>
     )
 }

@@ -4,9 +4,10 @@ import Button from "@material-ui/core/Button";
 import { device } from "../../Layout/mediaQueries";
 
 export const SecondBlockWrapper = styled.div`
-  height: 75vh;
-  min-height: 700px;
+  height: 72vh;
   width: 100%;
+  min-height: 600px;
+  max-height: 650px;
   background-color: #8f2d56;
   display: flex;
   flex-direction: column;
@@ -15,7 +16,24 @@ export const SecondBlockWrapper = styled.div`
   padding-top: 3vw;
   color: white;
 
+
   @media ${device.laptop} {
+    height: auto;
+    min-height: 750px;
+  }
+`;
+
+export const ContentLimit = styled.div`
+  max-width: 1500px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+
+
+  @media ${device.laptopL} {
     height: auto;
   }
 `;
@@ -23,7 +41,7 @@ export const SecondBlockWrapper = styled.div`
 export const Title = styled.span`
   width: 52%;
   font-size: ${textSize.l};
-  font-weight: 700;
+  font-weight: 500;
   text-align: center;
 
   @media ${device.laptop} {
@@ -32,9 +50,9 @@ export const Title = styled.span`
 `;
 
 export const AboutMeWrapper = styled.div`
-  width: 85%;
-  height: 80%;
-  padding-top: 4vw;
+  width: 70%;
+  max-height: 500px;
+  padding-top: 60px;
   display: grid;
   grid-template-columns: 1fr 6fr 1fr 6fr 1fr;
   grid-template-rows: repeat(9, 1fr);
@@ -46,34 +64,24 @@ export const AboutMeWrapper = styled.div`
     ". Picture . Texto ."
     ". Picture . Texto ."
     ". Picture . techSpan ."
-    ". Picture . Botao ."
-    ". Picture . . .";
+    ". Picture . techSpan ."
+    ". Picture . Botao .";
 
   @media ${device.laptopL} {
+    max-height: none;
     height: 90%;
-    width: 98%;
-    padding-top: 5vw;
-    grid-template-rows: repeat(10, 1fr);
-    grid-template-areas:
-      ". Picture . AboutMeTitle ."
-      ". Picture . Texto ."
-      ". Picture . Texto ."
-      ". Picture . Texto ."
-      ". Picture . Texto ."
-      ". Picture . Texto ."
-      ". Picture . techSpan . "
-      ". Picture . techSpan ."
-      ". Picture . Botao ."
-      ". Picture . . .";
+    width: 100%;
+    padding-top: 3vw;
   }
   @media ${device.laptop} {
     height: auto;
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
+
 `;
 
 export const Picture = styled.img`
@@ -81,7 +89,7 @@ export const Picture = styled.img`
   align-self: flex-start;
   justify-self: flex-end;
   width: 37vw;
-  max-width: 475px;
+  max-width: 370px;
   min-width: 180px;
   border-radius: 4px;
 
@@ -96,10 +104,14 @@ export const AboutMeTitle = styled.span`
   grid-area: AboutMeTitle;
   align-self: flex-start;
   justify-self: flex-start;
-  width: 85%;
+  width: 95%;
   font-size: ${textSize.xl};
-  font-weight: 700;
+  font-weight: 500;
   text-align: left;
+
+  @media ${device.desktop} {
+    font-size: ${textSize.l};
+  }
 
   @media ${device.laptopL} {
     font-size: ${textSize.m};
@@ -130,7 +142,6 @@ export const Text = styled.span`
   }
 
   @media ${device.laptop} {
-    width: 80%;
     text-align: center;
     align-self: center;
     justify-self: center;
@@ -140,15 +151,18 @@ export const Text = styled.span`
 
 export const Technologies = styled.div`
   grid-area: techSpan;
-  align-self: flex-start;
-  font-size: ${textSize.m};
+  align-self: center;
+  font-size: ${textSize.s};
   display: flex;
   flex-wrap: wrap;
+  align-self: flex-end;
   line-height: 1.6;
   width: 100%;
+  padding: 10px;
 
   @media ${device.laptopL} {
     font-size: ${textSize.s};
+    align-self: flex-end;
   }
 
   @media ${device.laptop} {
@@ -158,7 +172,10 @@ export const Technologies = styled.div`
     justify-content: center;
     align-self: center;
     justify-self: center;
-    margin: 10px 0;
+  }
+
+  @media ${device.mobileL}{
+    justify-content: flex-start;
   }
 `;
 
@@ -166,12 +183,16 @@ export const TechSpan = styled.span`
   border-left: 4px solid white;
   padding: 0 30px 0 8px;
   margin-bottom: 7px;
+
+  @media ${device.mobileL}{
+    width: 55px;
+  }
 `;
 
 export const CVButton = styled(Button)`
   && {
     grid-area: Botao;
-    align-self: flex-end;
+    align-self: center;
     background-color: #006ba6;
     color: #ffff;
     width: 100px;
@@ -185,11 +206,10 @@ export const CVButton = styled(Button)`
     }
     @media ${device.laptopL} {
     align-self: center;
-    margin-bottom: 10px;
+    margin: 2vw 0;
   }
     @media ${device.laptop} {
     align-self: center;
-    margin-bottom: 10px;
   }
   }
 `;
