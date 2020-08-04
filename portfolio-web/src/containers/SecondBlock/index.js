@@ -15,7 +15,7 @@ import profilePic from "../../img/perfilLinkedin.png";
 
 const SecondBlock = (props) => {
 
-    const technologies = ["React", "Redux", "Node.js", "Typescript", "SQL", "Firebase", "AWS"]
+    const technologies = ["React.js", "Node.js", "Typescript", "SQL", "Firebase", "AWS"]
 
 
   return (

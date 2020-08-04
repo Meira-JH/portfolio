@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import Portfolio from "../pages/Portfolio";
 import { useSelector } from "react-redux";
-import Header from "../components/Header";
+import Header from "../containers/Header";
 
 const Router = (props) => {
   const route = useSelector((state) => state.routes.currentPage);

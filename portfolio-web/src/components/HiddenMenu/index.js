@@ -1,5 +1,5 @@
 import React from "react";
-import { withStyles } from "@material-ui/core/styles";
+import { withStyles, makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
@@ -28,10 +28,25 @@ const StyledMenu = withStyles({
   />
 ));
 
+const useStyles = makeStyles(theme => ({
+    menuButton: {
+      backgroundColor: '#ffff',
+      '&:hover': {
+        backgroundColor: 'rgb(216, 17, 89, 0.1)',
+      },
+    },
+    menuIcon: {
+      color: '#8F2D56',
+      '&:hover': {
+        color: '#8F2D56',
+      },
+    },
+}))
+
 const StyledMenuItem = withStyles((theme) => ({
   root: {
     "&:focus": {
-      backgroundColor: "#614ea0",
+      backgroundColor: '#8F2D56',
       "& .MuiListItemIcon-root, & .MuiListItemText-primary": {
         color: theme.palette.common.white,
       },
@@ -40,6 +55,9 @@ const StyledMenuItem = withStyles((theme) => ({
 }))(MenuItem);
 
 export default function HiddenMenu(props) {
+
+  const classes = useStyles()
+
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleClick = (event) => {
@@ -55,12 +73,13 @@ export default function HiddenMenu(props) {
   return (
     <div>
       <Button
+        className={classes.menuButton}
         aria-controls="customized-menu"
         aria-haspopup="true"
         variant="contained"
         onClick={handleClick}
       >
-        <MenuIcon />
+        <MenuIcon className={classes.menuIcon}/>
       </Button>
       <StyledMenu
         id="customized-menu"
@@ -71,17 +90,17 @@ export default function HiddenMenu(props) {
       >
         <StyledMenuItem>
           <ListItemText
-            primary="Cadastre-se!"
+            primary="Quem sou"
           />
         </StyledMenuItem>
         <StyledMenuItem>
           <ListItemText
-            primary="Tem uma banda?"
+            primary="Projetos"
           />
         </StyledMenuItem>
         <StyledMenuItem>
           <ListItemText 
-            primary="Login" 
+            primary="Vamos conversar?" 
           />
         </StyledMenuItem>
       </StyledMenu>

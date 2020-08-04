@@ -1,7 +1,8 @@
 import React from 'react'
 import { PortfolioWrapper } from './style'
-import FirstBlock from '../../components/FirstBlock'
-import SecondBlock from '../../components/SecondBlock'
+import FirstBlock from '../../containers/FirstBlock'
+import SecondBlock from '../../containers/SecondBlock'
+import ThirdBlock from '../../containers/ThirdBlock'
 
 
 const Portfolio = (props) => {
@@ -10,6 +11,7 @@ const Portfolio = (props) => {
         <PortfolioWrapper>
             <FirstBlock/>
             <SecondBlock/>
+            <ThirdBlock />
         </PortfolioWrapper>
     )
 }

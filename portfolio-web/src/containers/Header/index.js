@@ -9,7 +9,7 @@ import {
   ContactMe,
   Name,
 } from "./style";
-import HiddenMenu from "../HiddenMenu";
+import HiddenMenu from "../../components/HiddenMenu";
 
 const Header = (props) => {
 

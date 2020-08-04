@@ -21,10 +21,14 @@ export const SecondBlockWrapper = styled.div`
 `;
 
 export const Title = styled.span`
-  width: 40%;
+  width: 52%;
   font-size: ${textSize.l};
   font-weight: 700;
   text-align: center;
+
+  @media ${device.laptop} {
+    font-size: ${textSize.s};
+  }
 `;
 
 export const AboutMeWrapper = styled.div`

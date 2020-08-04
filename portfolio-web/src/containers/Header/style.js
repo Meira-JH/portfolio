@@ -53,6 +53,11 @@ export const ButtonWrapper = styled.div`
     font-weight: 100;
     justify-self: flex-end;
   }
+
+  @media ${device.tablet} {
+    font-weight: 100;
+    justify-self: center;
+  }
 `;
 
 export const WhoAmI = styled.p`
@@ -69,7 +74,7 @@ export const WhoAmI = styled.p`
   -webkit-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   &:hover {
-    color: #bf213e;
+    color: #D81159;
   }
 
   @media ${device.laptopL} {
@@ -89,7 +94,7 @@ export const Projects = styled.p`
   padding: 4px;
   margin: 8px;
   border: 2px solid #8F2D56;
-  border-radius: 10px;
+  border-radius: 8px;
   cursor: pointer;
 
   transition: all 0.3s ease-out;
@@ -114,7 +119,7 @@ export const ContactMe = styled.p`
   padding: 4px;
   margin: 8px;
   border: 2px solid #0496FF;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
 
   transition: all 0.3s ease-out;
@@ -135,6 +140,6 @@ export const ContactMe = styled.p`
 export const MenuContainer = styled.div`
   display: none;
   @media ${device.tablet} {
-      display: inline;
+      display: block;
     }
 `
