@@ -10,6 +10,7 @@ import {
   CVButton,
   Technologies,
   TechSpan,
+  TextWrapper,
 } from "./style";
 import { whoAmI } from "../../Layout/Texts";
 import profilePic from "../../img/perfilLinkedin.png";
@@ -26,10 +27,10 @@ const SecondBlock = (props) => {
 
   return (
     <SecondBlockWrapper>
-      {/* <ContentLimit> */}
         <Title>{whoAmI.title}</Title>
         <AboutMeWrapper>
           <Picture src={profilePic} />
+          <TextWrapper>
           <AboutMeTitle>Sobre mim</AboutMeTitle>
           <Text> {whoAmI.text} </Text>
           <Technologies>
@@ -38,8 +39,8 @@ const SecondBlock = (props) => {
             ))}
           </Technologies>
           <CVButton>CV em pdf</CVButton>
+          </TextWrapper>
         </AboutMeWrapper>
-      {/* </ContentLimit> */}
     </SecondBlockWrapper>
   );
 };

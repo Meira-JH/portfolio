@@ -17,6 +17,7 @@ import {
   DescriptionTextRight,
   DescriptionTitleLeft,
   DescriptionTextLeft,
+  CVButton
 } from "./style";
 import IconComputer from "../../img/spotenu-fullstack-project.web.app_(iPad).png";
 import IconTablet from "../../img/printtela2.png";
@@ -72,6 +73,7 @@ const FourthBlock = (props) => {
           </DescriptionRight>
         </ProjectRight>
       </ProjectsWrapper>
+      <CVButton>Mais Projetos</CVButton>
     </FourthBlockWrapper>
   );
 };

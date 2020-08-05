@@ -42,7 +42,7 @@ const ThirdBlock = (props) => {
     <ThirdBlockWrapper>
       <KnowledgeWrapper>
         <KnowledgeTitle>
-          <p>{knowledge.title}</p>
+          <span>{knowledge.title}</span>
           <Technologies>{iconsRender}</Technologies>
         </KnowledgeTitle>
         <FrontEnd>

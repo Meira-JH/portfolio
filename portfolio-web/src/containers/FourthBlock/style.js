@@ -12,6 +12,7 @@ export const FourthBlockWrapper = styled.div`
   justify-content: flex-start;
   align-items: center;
   color: #ffff;
+  padding: 25px 0;
 `;
 
 export const ProjectsWrapper = styled.div`
@@ -35,11 +36,6 @@ export const Title = styled.span`
   font-size: ${textSize.xl};
   font-weight: 300;
   text-align: center;
-  padding: 2vw;
-
-  @media ${device.laptopL} {
-    padding: 15px;
-  }
 
   @media ${device.laptop} {
     font-size: ${textSize.l};
@@ -230,6 +226,32 @@ export const DescriptionButton = styled(Button)`
     }
     @media ${device.mobileL} {
         margin-top: 5px;
+    }
+  }
+`;
+
+export const CVButton = styled(Button)`
+  && {
+    grid-area: Botao;
+    align-self: center;
+    background-color: #006ba6;
+    color: #ffff;
+    width: 150px;
+    height: 35px;
+    border-radius: 10px;
+    box-shadow: 2px 2px;
+    margin-top: 25px;
+
+    &:hover {
+      background-color: #ffff;
+      color: #006ba6;
+      font-weight: 900;
+    }
+    @media ${device.laptopL} {
+      align-self: center;
+    }
+    @media ${device.laptop} {
+      align-self: center;
     }
   }
 `;

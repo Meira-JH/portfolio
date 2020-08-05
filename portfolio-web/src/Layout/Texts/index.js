@@ -8,7 +8,7 @@ export const textSize = {
   
   
   export const whoAmI = {
-      title: "Olá, eu sou o João. Seja bem-vinda(o)!",
+      title: "Olá, eu sou o João. Seja bem-vindo!",
       text: `Depois de uma intensa jornada como professor, acadêmico e advogado; decidi me dedicar à uma antiga paixão: a tecnologia. Em fevereiro de 2020 iniciei meus estudos em programação. Sou um desenvolvedor Fullstack em formação pela Labenu, empolgado com o universo da programação que me está sendo revelado e inspirado por ambientes que alimentem minha sede de conhecimento.
        Esse é o repertório de linguagens, ferramentas e frameworks com as quais tenho mais familiaridade hoje:`
   }
@@ -22,7 +22,7 @@ export const textSize = {
     title: "Conhecimentos como desenvolvedor",
     titleFrontEnd: "Front-end",
     titleBackEnd: "Back-end",
-    textFrontEnd: "Desenvolvimento de aplicações web em HTML, CSS e JavaScript. Criação de sites responsivos, com código limpo e testes (unitários e integração). Deploy de aplicações pelo Hosting do Google Firebase.",
+    textFrontEnd: "Desenvolvimento de aplicações web em HTML, CSS e JavaScript. Criação de sites integrados por React-Redux, responsivos, com código limpo e testes (unitários e integração pela biblioteca JEST). Deploy de aplicações pelo Hosting do Google Firebase.",
     textBackEnd: "Aplicações ambientadas em NodeJS e uso das linguagnes Typescript e MySQL. Familiaridade com as funcionalidades EC2, Cloud, S3 e Lambda da plataforma AWS e com as funcionalidades Firestore, DataBase, Authentication e Functions da plataforma Google Firebase."
   }
 

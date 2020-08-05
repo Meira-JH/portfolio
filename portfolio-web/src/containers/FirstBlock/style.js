@@ -9,13 +9,12 @@ export const FirstBlockWrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
   padding-top: 3vw;
 `;
 
 export const ContentLimit = styled.div`
-  max-width: 1400px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -26,7 +25,7 @@ export const ContentLimit = styled.div`
 export const Title = styled.span`
   font-size: 37px;
   font-weight: 700;
-  padding: 10px;
+  padding: 10px 0;
   text-align: center;
 `;
 
@@ -34,6 +33,7 @@ export const Subtitle = styled.span`
   font-size: 23px;
   font-weight: 50;
   text-align: center;
+  padding: 10px 0 20px 0;
 `;
 
 export const DrawWrapper = styled.div`
