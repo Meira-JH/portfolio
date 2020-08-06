@@ -5,8 +5,7 @@ import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import MenuIcon from "@material-ui/icons/Menu";
-import { useHistory } from "react-router-dom";
-
+import { Link } from "react-scroll";
 
 const StyledMenu = withStyles({
   paper: {
@@ -28,25 +27,25 @@ const StyledMenu = withStyles({
   />
 ));
 
-const useStyles = makeStyles(theme => ({
-    menuButton: {
-      backgroundColor: '#ffff',
-      '&:hover': {
-        backgroundColor: 'rgb(216, 17, 89, 0.1)',
-      },
+const useStyles = makeStyles((theme) => ({
+  menuButton: {
+    backgroundColor: "#ffff",
+    "&:hover": {
+      backgroundColor: "rgb(216, 17, 89, 0.1)",
     },
-    menuIcon: {
-      color: '#8F2D56',
-      '&:hover': {
-        color: '#8F2D56',
-      },
+  },
+  menuIcon: {
+    color: "#8F2D56",
+    "&:hover": {
+      color: "#8F2D56",
     },
-}))
+  },
+}));
 
 const StyledMenuItem = withStyles((theme) => ({
   root: {
     "&:focus": {
-      backgroundColor: '#8F2D56',
+      backgroundColor: "#8F2D56",
       "& .MuiListItemIcon-root, & .MuiListItemText-primary": {
         color: theme.palette.common.white,
       },
@@ -55,8 +54,7 @@ const StyledMenuItem = withStyles((theme) => ({
 }))(MenuItem);
 
 export default function HiddenMenu(props) {
-
-  const classes = useStyles()
+  const classes = useStyles();
 
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -68,8 +66,6 @@ export default function HiddenMenu(props) {
     setAnchorEl(null);
   };
 
-  const history = useHistory()
-
   return (
     <div>
       <Button
@@ -79,7 +75,7 @@ export default function HiddenMenu(props) {
         variant="contained"
         onClick={handleClick}
       >
-        <MenuIcon className={classes.menuIcon}/>
+        <MenuIcon className={classes.menuIcon} />
       </Button>
       <StyledMenu
         id="customized-menu"
@@ -88,20 +84,20 @@ export default function HiddenMenu(props) {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <StyledMenuItem>
-          <ListItemText
-            primary="Quem sou"
-          />
+        <StyledMenuItem className={classes.menuItem} >
+          <Link to="whoAmI" smooth={true} duration={600} onClick={handleClose}>
+            <ListItemText primary="Quem sou"/>
+          </Link>
         </StyledMenuItem>
         <StyledMenuItem>
-          <ListItemText
-            primary="Projetos"
-          />
+          <Link to="projects" smooth={true} duration={1000} onClick={handleClose}>
+            <ListItemText primary="Projetos"/>
+          </Link>
         </StyledMenuItem>
         <StyledMenuItem>
-          <ListItemText 
-            primary="Vamos conversar?" 
-          />
+          <Link to="contact" smooth={true} duration={1100} onClick={handleClose}>
+            <ListItemText primary="Vamos conversar?"/>
+          </Link>
         </StyledMenuItem>
       </StyledMenu>
     </div>

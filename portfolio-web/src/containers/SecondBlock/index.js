@@ -1,7 +1,6 @@
 import React from "react";
 import {
   SecondBlockWrapper,
-  ContentLimit,
   Title,
   Text,
   AboutMeWrapper,
@@ -26,7 +25,7 @@ const SecondBlock = (props) => {
   ];
 
   return (
-    <SecondBlockWrapper>
+    <SecondBlockWrapper id="whoAmI">
         <Title>{whoAmI.title}</Title>
         <AboutMeWrapper>
           <Picture src={profilePic} />
@@ -34,8 +33,8 @@ const SecondBlock = (props) => {
           <AboutMeTitle>Sobre mim</AboutMeTitle>
           <Text> {whoAmI.text} </Text>
           <Technologies>
-            {technologies.map((tech) => (
-              <TechSpan> {tech} </TechSpan>
+            {technologies.map((tech, index) => (
+              <TechSpan key={index}> {tech} </TechSpan>
             ))}
           </Technologies>
           <CVButton>CV em pdf</CVButton>

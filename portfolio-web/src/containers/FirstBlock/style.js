@@ -2,6 +2,8 @@ import styled from "styled-components";
 import iconGitHub from "./../../img/github.svg";
 import iconLinkedin from "./../../img/linkedin.svg";
 import iconWhatsApp from "./../../img/whatsapp.svg";
+import { device } from "../../Layout/mediaQueries";
+import { textSize } from "../../Layout/Texts";
 
 export const FirstBlockWrapper = styled.div`
   height: 68vh;
@@ -23,17 +25,26 @@ export const ContentLimit = styled.div`
 `
 
 export const Title = styled.span`
-  font-size: 37px;
-  font-weight: 700;
+  font-size: ${textSize.xl};
+  font-weight: 500;
   padding: 10px 0;
   text-align: center;
+
+  @media ${device.tablet}{
+    font-size: ${textSize.l}
+  }
 `;
 
 export const Subtitle = styled.span`
+  width: 78%;
   font-size: 23px;
   font-weight: 50;
   text-align: center;
   padding: 10px 0 20px 0;
+
+  @media ${device.tablet}{
+    font-size: ${textSize.s}
+  }
 `;
 
 export const DrawWrapper = styled.div`
@@ -70,7 +81,7 @@ export const SocialNetworks = styled.div`
   justify-content: space-between;
 `;
 
-export const IconWrapper = styled.div`
+export const IconWrapper = styled.a`
   width: 2vw;
   height: 2vw;
   min-height: 27px;
@@ -137,6 +148,7 @@ export const WhatsApp = styled.img`
     background-color: #ffff;
   }
 `;
+
 export const Linkedin = styled.img`
   background-color: #0496FF;
   mask: url(${iconLinkedin});

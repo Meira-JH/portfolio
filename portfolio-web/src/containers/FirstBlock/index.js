@@ -14,6 +14,8 @@ import {
 } from "./style";
 import iconDraw from "../../img/desenhojoao.svg";
 import { opening } from "../../Layout/Texts";
+import { linksList } from "../../util/externalLinks";
+import { Link } from "react-scroll";
 
 const FirstBlock = (props) => {
   return (
@@ -25,14 +27,16 @@ const FirstBlock = (props) => {
           <Draw src={iconDraw} />
         </DrawWrapper>
         <SocialNetworks>
-          <IconWrapper>
+          <IconWrapper href={linksList.gitHub}>
             <GitHub />
           </IconWrapper>
-          <IconWrapper>
-            <WhatsApp src />
-          </IconWrapper>
-          <IconWrapper>
-            <Linkedin src />
+          <Link to="contact" smooth={true} duration={1100}>
+            <IconWrapper>
+              <WhatsApp />
+            </IconWrapper>
+          </Link>
+          <IconWrapper href={linksList.linkedin}>
+            <Linkedin />
           </IconWrapper>
         </SocialNetworks>
       </ContentLimit>

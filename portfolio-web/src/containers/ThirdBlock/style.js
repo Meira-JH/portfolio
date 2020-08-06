@@ -11,6 +11,12 @@ export const ThirdBlockWrapper = styled.div`
   justify-content: flex-start;
   align-items: center;
   color: #006ba6;
+  padding: 49px 0 79px 0;
+
+  @media ${device.laptop} {
+    padding: 30px 0 49px 0;
+  }
+  
 `;
 
 export const KnowledgeWrapper = styled.div`
@@ -19,7 +25,7 @@ export const KnowledgeWrapper = styled.div`
   height: auto;
   display: grid;
   grid-template-columns: 1fr 2fr 2fr 1fr;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: 1fr, 2fr;
   grid-template-areas:
     ". knowledgeTitle knowledgeTitle ."
     ". frontEnd backEnd .";
@@ -42,7 +48,7 @@ export const KnowledgeTitle = styled.div`
   grid-area: knowledgeTitle;
   display: flex;
   flex-direction: column;
-  align-self: center;
+  align-self: flex-start;
   align-items: center;
   justify-content: space-around;
   justify-self: center;
@@ -50,6 +56,7 @@ export const KnowledgeTitle = styled.div`
   font-size: ${textSize.xl};
   font-weight: 300;
   text-align: center;
+  padding-bottom: 49px;
 
   @media ${device.laptopL} {
     display: flex;
@@ -59,7 +66,6 @@ export const KnowledgeTitle = styled.div`
     justify-content: center;
     justify-self: center;
     font-weight: 300;
-    padding: 15px 0;
   }
 
   @media ${device.laptop} {

@@ -3,7 +3,6 @@ const initialState = {
 };
 
 export default (state = initialState, action) => {
-  console.log(action)
   switch (action.type) {
     case "UPDATE_CURRENT_PAGE":
       return { currentPage: action.payload.newPage }

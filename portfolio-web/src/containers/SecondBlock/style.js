@@ -12,26 +12,22 @@ export const SecondBlockWrapper = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 3vw 0;
+  padding: 49px 0 79px 0;
   color: white;
 
   @media ${device.laptop} {
     height: auto;
     max-height: none;
     min-height: 750px;
+    padding: 30px 0 49px 0;
   }
 `;
 
 export const Title = styled.span`
   width: 52%;
   font-size: ${textSize.l};
-  font-weight: 500;
+  font-weight: 300;
   text-align: center;
-
-  @media ${device.laptop} {
-    font-size: ${textSize.l};
-    font-weight: 300;
-  }
 
   @media ${device.mobileL} {
     font-size: ${textSize.m};
@@ -43,7 +39,7 @@ export const Title = styled.span`
 
 export const AboutMeWrapper = styled.div`
   width: 70%;
-  padding-top: 60px;
+  padding-top: 79px;
   display: flex;
   justify-content: center;
 
@@ -202,7 +198,6 @@ export const CVButton = styled(Button)`
     }
     @media ${device.laptopL} {
       align-self: flex-start;
-      margin: 1vw 0;
     }
     @media ${device.laptop} {
       align-self: center;

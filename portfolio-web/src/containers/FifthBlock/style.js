@@ -10,16 +10,22 @@ export const FifthBlockWrapper = styled.div`
   align-items: center;
   justify-content: center;
   background-color: #485864;
-  padding-bottom: 3vw;
+  padding: 49px 0 79px 0;
+
+  @media ${device.laptop} {
+    padding: 30px 0 49px 0;
+  }
 `;
 
-export const Title = styled.p`
+export const Title = styled.span`
+  padding-bottom: 79px;
   color: #ffff;
   font-size: ${textSize.xl};
   font-weight: 300;
 
-  @media ${device.tablet}{
-      font-size: ${textSize.l}
+  @media ${device.tablet} {
+    padding-bottom: 49px;
+    font-size: ${textSize.l};
   }
 `;
 
@@ -67,7 +73,6 @@ export const Board = styled.div`
     min-height: 0;
     margin-bottom: 10px;
   }
-
 `;
 
 export const BoardTitle = styled.span`
@@ -77,7 +82,7 @@ export const BoardTitle = styled.span`
   font-size: ${textSize.l};
 
   @media ${device.laptop} {
-      font-size: ${textSize.m}
+    font-size: ${textSize.m};
   }
 `;
 
@@ -95,9 +100,8 @@ export const BoardSubTitle = styled.div`
   padding: 20px 0;
 
   @media ${device.laptop} {
-      font-size: ${textSize.s}
+    font-size: ${textSize.s};
   }
-
 `;
 
 export const BoardIcon = styled.img`
@@ -110,7 +114,7 @@ export const BoardText = styled.div`
   font-size: ${textSize.m};
 
   @media ${device.laptop} {
-      font-size: ${textSize.s}
+    font-size: ${textSize.s};
   }
 `;
 
@@ -118,21 +122,22 @@ export const CVButton = styled(Button)`
   && {
     grid-area: Botao;
     align-self: center;
-    background-color: #006ba6;
-    color: #ffff;
+    background-color: #ffff;
+    color: #006ba6;
     width: 100px;
     height: 35px;
     border-radius: 10px;
     box-shadow: 2px 2px;
-    margin-top: 25px;
+    margin-top: 79px;
 
     &:hover {
-      background-color: #ffff;
-      color: #006ba6;
+      background-color: #006ba6;
+      color: #ffff;
       font-weight: 900;
     }
     @media ${device.laptopL} {
       align-self: center;
+      margin-top: 49px;
     }
     @media ${device.laptop} {
       align-self: center;

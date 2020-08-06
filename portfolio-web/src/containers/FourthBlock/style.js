@@ -6,13 +6,17 @@ import Button from "@material-ui/core/Button";
 export const FourthBlockWrapper = styled.div`
   height: auto;
   width: 100%;
-  background-color: #0496ff;
+  background-color: #ffbc42;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   color: #ffff;
-  padding: 25px 0;
+  padding: 49px 0 79px 0;
+
+  @media ${device.laptop} {
+    padding: 30px 0 49px 0;
+  }
 `;
 
 export const ProjectsWrapper = styled.div`
@@ -43,17 +47,21 @@ export const Title = styled.span`
 `;
 
 export const ProjectRight = styled.div`
-  width: 80%;
+  width: 70%;
   height: 100%;
   min-height: 190px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 3vw 0;
+  padding: 79px 0;
 
-  @media ${device.mobileL}{
-      flex-direction: column;
-      padding: 30px 0;
+  @media ${device.laptop} {
+    width: 85%;
+  }
+
+  @media ${device.mobileL} {
+    flex-direction: column;
+    padding: 30px 0;
   }
 `;
 
@@ -65,19 +73,41 @@ export const ProjectLeft = styled.div`
   flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
-  padding: 3vw 0;
+  padding: 30px 0;
 
-  @media ${device.mobileL}{
-      flex-direction: column;
-      margin: 35px 0;
+  @media ${device.laptop} {
+    width: 85%;
+  }
+
+  @media ${device.mobileL} {
+    flex-direction: column;
   }
 `;
 
-export const IconWrapper = styled.div`
+export const IconWrapperRight = styled.div`
   width: 50%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+  padding-right: 79px;
+
+  @media ${device.mobileL} {
+    justify-content: center;
+    padding-right: 0px;
+  }
+`;
+
+export const IconWrapperLeft = styled.div`
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 79px;
+
+  @media ${device.mobileL} {
+    justify-content: center;
+    padding-left: 0px;
+  }
 `;
 
 export const Icon = styled.img`
@@ -100,11 +130,12 @@ export const DescriptionRight = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
 
-  @media ${device.tablet}{
-    padding-left: 20px;
+  @media ${device.mobileL} {
+    align-items: center;
   }
-  @media ${device.mobileL}{
-      align-items: center;
+
+  @media ${device.mobileL} {
+    align-items: center;
   }
 `;
 
@@ -116,8 +147,8 @@ export const DescriptionLeft = styled.div`
   justify-content: flex-start;
   align-items: flex-end;
 
-    @media ${device.mobileL}{
-      align-items: center;
+  @media ${device.mobileL} {
+    align-items: center;
   }
 `;
 
@@ -125,7 +156,7 @@ export const DescriptionTitleRight = styled.span`
   font-size: ${textSize.xl};
   font-weight: 700;
   text-align: left;
-  color: black;
+  color: #22303d;
   padding-bottom: 5px;
 
   @media ${device.laptopL} {
@@ -137,7 +168,7 @@ export const DescriptionTitleLeft = styled.span`
   font-size: ${textSize.xl};
   font-weight: 700;
   text-align: right;
-  color: black;
+  color: #22303d;
   padding-bottom: 5px;
 
   @media ${device.laptopL} {
@@ -149,7 +180,7 @@ export const DescriptionSubTitleRight = styled.span`
   font-size: ${textSize.l};
   font-weight: 300;
   text-align: left;
-  color: black;
+  color: #ffff;
   padding-bottom: 10px;
 
   @media ${device.laptopL} {
@@ -162,7 +193,7 @@ export const DescriptionSubTitleLeft = styled.span`
   font-size: ${textSize.l};
   font-weight: 300;
   text-align: right;
-  color: black;
+  color: #ffff;
   padding-bottom: 10px;
 
   @media ${device.laptopL} {
@@ -175,10 +206,9 @@ export const DescriptionTextRight = styled.span`
   font-size: ${textSize.m};
   font-weight: 100;
   text-align: left;
+  color: #22303d;
 
-  @media ${device.laptopL} {
-    padding: 1vw 0;
-  }
+
   @media ${device.laptop} {
     padding: 1vw 0;
     font-size: ${textSize.s};
@@ -192,13 +222,9 @@ export const DescriptionTextLeft = styled.span`
   font-size: ${textSize.m};
   font-weight: 100;
   text-align: right;
-
-  @media ${device.laptopL} {
-    padding: 1vw 0;
-  }
+  color: #22303d;
 
   @media ${device.laptop} {
-    padding: 1vw 0;
     font-size: ${textSize.s};
   }
 
@@ -209,23 +235,23 @@ export const DescriptionTextLeft = styled.span`
 
 export const DescriptionButton = styled(Button)`
   && {
-    background-color: #ffbc42;
-    color: #ffff;
+    background-color: #ffff;
+    color: #0496FF;
     width: 150px;
     height: 35px;
     border-radius: 10px;
     box-shadow: 2px 2px;
-    margin-top: 25px;
+    margin-top: ${textSize.s};
     &:hover {
-      background-color: #ffff;
-      color: #ffbc42;
+      background-color: #0496FF;
+      color: #ffff;
       font-weight: 900;
     }
     @media ${device.laptopL} {
       height: 30px;
     }
     @media ${device.mobileL} {
-        margin-top: 5px;
+      margin-top: 5px;
     }
   }
 `;
@@ -240,7 +266,7 @@ export const CVButton = styled(Button)`
     height: 35px;
     border-radius: 10px;
     box-shadow: 2px 2px;
-    margin-top: 25px;
+    margin-top: 30px;
 
     &:hover {
       background-color: #ffff;

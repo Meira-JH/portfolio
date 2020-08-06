@@ -5,7 +5,8 @@ import {
   Title,
   ProjectRight,
   ProjectLeft,
-  IconWrapper,
+  IconWrapperRight,
+  IconWrapperLeft,
   Icon,
   IconPhone,
   DescriptionLeft,
@@ -17,63 +18,83 @@ import {
   DescriptionTextRight,
   DescriptionTitleLeft,
   DescriptionTextLeft,
-  CVButton
+  CVButton,
 } from "./style";
 import IconComputer from "../../img/spotenu-fullstack-project.web.app_(iPad).png";
 import IconTablet from "../../img/printtela2.png";
 import IconLaptop from "../../img/localhost_3000_(iPad) (2).png";
 import { spotenu, futureEats, fourEddit } from "../../Layout/Texts";
+import { linksList } from "../../util/externalLinks";
 
 const FourthBlock = (props) => {
+
+  function openPage(page) {
+    switch(page){
+      case "spotenu":
+        return window.open(linksList.spotenu);
+      case "futureEats":
+        return window.open(linksList.futureEats);
+      case "fourEddit":
+        return window.open(linksList.fourEddit);
+      case "gitHub":
+        return window.open(linksList.gitHub);
+      default:
+        return window.open(linksList.gitHub);
+    }
+  }
+
   return (
-    <FourthBlockWrapper>
+    <FourthBlockWrapper id="projects">
       <ProjectsWrapper>
         <Title>Meus Projetos</Title>
 
         <ProjectRight>
-          <IconWrapper>
+          <IconWrapperRight>
             <Icon src={IconComputer} />
-          </IconWrapper>
+          </IconWrapperRight>
           <DescriptionRight>
             <DescriptionTitleRight> {spotenu.title} </DescriptionTitleRight>
             <DescriptionSubTitleRight>
-              {" "}
-              {spotenu.subtitle}{" "}
+              {spotenu.subtitle}
             </DescriptionSubTitleRight>
             <DescriptionTextRight> {spotenu.text} </DescriptionTextRight>
-            <DescriptionButton>GitHub</DescriptionButton>
+            <DescriptionButton onClick={() => openPage("spotenu")}>
+              GitHub
+            </DescriptionButton>
           </DescriptionRight>
         </ProjectRight>
         <ProjectLeft>
-          <IconWrapper>
+          <IconWrapperLeft>
             <IconPhone src={IconTablet} />
-          </IconWrapper>
+          </IconWrapperLeft>
           <DescriptionLeft>
             <DescriptionTitleLeft> {futureEats.title} </DescriptionTitleLeft>
             <DescriptionSubTitleLeft>
-              {" "}
-              {futureEats.subtitle}{" "}
+              {futureEats.subtitle}
             </DescriptionSubTitleLeft>
             <DescriptionTextLeft> {futureEats.text} </DescriptionTextLeft>
-            <DescriptionButton>GitHub</DescriptionButton>
+            <DescriptionButton onClick={() => openPage("futureEats")}>
+              GitHub
+            </DescriptionButton>
           </DescriptionLeft>
         </ProjectLeft>
         <ProjectRight>
-          <IconWrapper>
+          <IconWrapperRight>
             <Icon src={IconLaptop} />
-          </IconWrapper>
+          </IconWrapperRight>
           <DescriptionRight>
             <DescriptionTitleRight> {fourEddit.title} </DescriptionTitleRight>
             <DescriptionSubTitleRight>
-              {" "}
-              {fourEddit.subtitle}{" "}
+              {fourEddit.subtitle}
             </DescriptionSubTitleRight>
             <DescriptionTextRight> {fourEddit.text} </DescriptionTextRight>
-            <DescriptionButton>GitHub</DescriptionButton>
+            <DescriptionButton onClick={() => openPage("fourEddit")}>
+              GitHub
+            </DescriptionButton>
           </DescriptionRight>
         </ProjectRight>
       </ProjectsWrapper>
-      <CVButton>Mais Projetos</CVButton>
+      <CVButton onClick={() => openPage("giHub")}>Mais Projetos</CVButton>
     </FourthBlockWrapper>
   );
 };

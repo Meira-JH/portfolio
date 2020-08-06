@@ -35,7 +35,7 @@ const ThirdBlock = (props) => {
     ];
 
   const iconsRender = iconsList.map((icon, index) => (
-    <Icon src={icon}/>
+    <Icon key={index} src={icon}/>
   ));
 
   return (
