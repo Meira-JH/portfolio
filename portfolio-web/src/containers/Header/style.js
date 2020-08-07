@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { device } from "../../Layout/mediaQueries";
 import { textSize } from "../../Layout/Texts";
 
@@ -26,13 +26,28 @@ export const LogoWrapper = styled.div`
   text-align: center;
 `;
 
+const animation = keyframes`
+  0% { 
+    border-right: 4px solid #0496FF
+   }
+  50% { 
+    border-right: 4px solid #D81159
+   }
+  100% { 
+    border-right: 4px solid #FFBC42
+   }
+`
+
 export const Name = styled.p`
   color: #0496FF;
-  font-size: ${textSize.l};
+  font-size: ${textSize.m};
   font-weight: 900;
+  padding: 4px 8px;
+  animation: ${animation} 4s infinite alternate ease-in-out;
 
   @media ${device.laptop} {
     font-size: ${textSize.m};
+    animation: none
   }
 `
 

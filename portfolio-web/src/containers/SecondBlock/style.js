@@ -4,73 +4,47 @@ import Button from "@material-ui/core/Button";
 import { device } from "../../Layout/mediaQueries";
 
 export const SecondBlockWrapper = styled.div`
-  height: 72vh;
+  height: auto;
+  max-height: 750px;
   width: 100%;
-  min-height: 600px;
-  max-height: 650px;
   background-color: #8f2d56;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding-top: 3vw;
+  padding: 49px 0 79px 0;
   color: white;
-
 
   @media ${device.laptop} {
     height: auto;
+    max-height: none;
     min-height: 750px;
-  }
-`;
-
-export const ContentLimit = styled.div`
-  max-width: 1500px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  color: white;
-
-
-  @media ${device.laptopL} {
-    height: auto;
+    padding: 30px 0 49px 0;
   }
 `;
 
 export const Title = styled.span`
   width: 52%;
   font-size: ${textSize.l};
-  font-weight: 500;
+  font-weight: 300;
   text-align: center;
 
-  @media ${device.laptop} {
-    font-size: ${textSize.s};
+  @media ${device.mobileL} {
+    font-size: ${textSize.m};
+    font-weight: 300;
   }
+
+  
 `;
 
 export const AboutMeWrapper = styled.div`
   width: 70%;
-  max-height: 500px;
-  padding-top: 60px;
-  display: grid;
-  grid-template-columns: 1fr 6fr 1fr 6fr 1fr;
-  grid-template-rows: repeat(9, 1fr);
-  grid-template-areas:
-    ". Picture . AboutMeTitle ."
-    ". Picture . Texto ."
-    ". Picture . Texto ."
-    ". Picture . Texto ."
-    ". Picture . Texto ."
-    ". Picture . Texto ."
-    ". Picture . techSpan ."
-    ". Picture . techSpan ."
-    ". Picture . Botao .";
+  padding-top: 79px;
+  display: flex;
+  justify-content: center;
 
   @media ${device.laptopL} {
-    max-height: none;
-    height: 90%;
-    width: 100%;
+    width: 90%;
     padding-top: 3vw;
   }
   @media ${device.laptop} {
@@ -81,7 +55,20 @@ export const AboutMeWrapper = styled.div`
     justify-content: center;
     align-items: center;
   }
+`;
 
+export const TextWrapper = styled.div`
+  width: 35%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-left: 30px;
+
+  @media ${device.laptop} {
+    width: 80%;
+  }
 `;
 
 export const Picture = styled.img`
@@ -113,11 +100,8 @@ export const AboutMeTitle = styled.span`
     font-size: ${textSize.l};
   }
 
-  @media ${device.laptopL} {
-    font-size: ${textSize.m};
-  }
-
   @media ${device.laptop} {
+    font-size: ${textSize.m};
     width: auto;
     align-self: center;
     justify-self: center;
@@ -147,6 +131,13 @@ export const Text = styled.span`
     justify-self: center;
     line-height: 1.6;
   }
+
+  @media ${device.mobileL} {
+    text-align: left;
+    align-self: flex-start;
+    justify-self: flex-start;
+    line-height: 1.6;
+  }
 `;
 
 export const Technologies = styled.div`
@@ -157,7 +148,7 @@ export const Technologies = styled.div`
   flex-wrap: wrap;
   align-self: flex-end;
   line-height: 1.6;
-  width: 100%;
+  width: 97%;
   padding: 10px;
 
   @media ${device.laptopL} {
@@ -166,7 +157,7 @@ export const Technologies = styled.div`
   }
 
   @media ${device.laptop} {
-    width: 77%;
+    width: 80%;
     flex-wrap: wrap;
     text-align: center;
     justify-content: center;
@@ -174,8 +165,9 @@ export const Technologies = styled.div`
     justify-self: center;
   }
 
-  @media ${device.mobileL}{
+  @media ${device.mobileL} {
     justify-content: flex-start;
+    align-self: flex-start;
   }
 `;
 
@@ -184,15 +176,15 @@ export const TechSpan = styled.span`
   padding: 0 30px 0 8px;
   margin-bottom: 7px;
 
-  @media ${device.mobileL}{
-    width: 55px;
+  @media ${device.mobileL} {
+    width: 70px;
   }
 `;
 
 export const CVButton = styled(Button)`
   && {
     grid-area: Botao;
-    align-self: center;
+    align-self: flex-start;
     background-color: #006ba6;
     color: #ffff;
     width: 100px;
@@ -205,11 +197,10 @@ export const CVButton = styled(Button)`
       font-weight: 900;
     }
     @media ${device.laptopL} {
-    align-self: center;
-    margin: 2vw 0;
-  }
+      align-self: flex-start;
+    }
     @media ${device.laptop} {
-    align-self: center;
-  }
+      align-self: center;
+    }
   }
 `;

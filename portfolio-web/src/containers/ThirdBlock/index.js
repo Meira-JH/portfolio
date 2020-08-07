@@ -35,14 +35,14 @@ const ThirdBlock = (props) => {
     ];
 
   const iconsRender = iconsList.map((icon, index) => (
-    <Icon src={icon}/>
+    <Icon key={index} src={icon}/>
   ));
 
   return (
     <ThirdBlockWrapper>
       <KnowledgeWrapper>
         <KnowledgeTitle>
-          <p>{knowledge.title}</p>
+          <span>{knowledge.title}</span>
           <Technologies>{iconsRender}</Technologies>
         </KnowledgeTitle>
         <FrontEnd>

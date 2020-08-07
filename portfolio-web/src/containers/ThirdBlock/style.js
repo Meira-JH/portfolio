@@ -11,21 +11,27 @@ export const ThirdBlockWrapper = styled.div`
   justify-content: flex-start;
   align-items: center;
   color: #006ba6;
+  padding: 49px 0 79px 0;
+
+  @media ${device.laptop} {
+    padding: 30px 0 49px 0;
+  }
+  
 `;
 
 export const KnowledgeWrapper = styled.div`
-  width: 85%;
+  width: 90%;
+  max-width: 1400px;
   height: auto;
   display: grid;
-  grid-template-columns: 1fr 3fr 3fr 1fr;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: 1fr 2fr 2fr 1fr;
+  grid-template-rows: 1fr, 2fr;
   grid-template-areas:
     ". knowledgeTitle knowledgeTitle ."
     ". frontEnd backEnd .";
 
   @media ${device.laptopL} {
-    height: auto;
-    width: 98%;
+    grid-template-columns: 1fr 10fr 10fr 1fr;
   }
 
   @media ${device.laptop} {
@@ -46,27 +52,27 @@ export const KnowledgeTitle = styled.div`
   align-items: center;
   justify-content: space-around;
   justify-self: center;
-  width: 85%;
+  width: 100%;
   font-size: ${textSize.xl};
-  font-weight: 500;
+  font-weight: 300;
   text-align: center;
+  padding-bottom: 49px;
 
   @media ${device.laptopL} {
     display: flex;
     flex-direction: column;
-    align-self: flex-start;
+    align-self: center;
     align-items: center;
     justify-content: center;
     justify-self: center;
-    font-size: ${textSize.l};
-    font-weight: 900;
+    font-weight: 300;
   }
 
   @media ${device.laptop} {
     display: flex;
     flex-direction: column;
     align-self: center;
-    align-items: center;
+    align-items: space-around;
     justify-content: center;
     justify-self: center;
     width: auto;
@@ -81,6 +87,7 @@ export const Technologies = styled.div`
   flex-wrap: wrap;
   justify-content: space-around;
   width: 35%;
+  margin-top: 20px;
 
   @media ${device.laptop} {
     width: 77%;
@@ -88,7 +95,6 @@ export const Technologies = styled.div`
     justify-content: center;
     align-self: center;
     justify-self: center;
-    margin: 10px 0;
   }
 `;
 
@@ -96,6 +102,11 @@ export const Icon = styled.img`
   width: ${textSize.xl};
   height: ${textSize.xl};
   padding: 5px;
+
+  @media ${device.laptop}{
+    width: ${textSize.l};
+    height: ${textSize.l};
+  }
 `;
 
 export const FrontEnd = styled.div`
@@ -103,9 +114,14 @@ export const FrontEnd = styled.div`
   width: 85%;
   display: flex;
   flex-direction: column;
+  align-self: flex-start;
   align-items: center;
   justify-self: center;
-  margin-bottom: 2vw;
+  margin-bottom: 35px;
+
+  @media ${device.laptop} {
+    align-self: center;
+  }
 `;
 
 export const BackEnd = styled.div`
@@ -113,9 +129,13 @@ export const BackEnd = styled.div`
   width: 85%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-self: flex-start;
   justify-self: center;
-  margin-bottom: 2vw;
+  margin-bottom: 35px;
+
+  @media ${device.laptop} {
+    align-self: center;
+  }
 `;
 
 export const Title = styled.span`
