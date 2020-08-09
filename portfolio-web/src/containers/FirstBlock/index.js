@@ -18,6 +18,20 @@ import { linksList } from "../../util/externalLinks";
 import { Link } from "react-scroll";
 
 const FirstBlock = (props) => {
+
+  function openPage(page) {
+    switch(page){
+      case "linkedin":
+        return window.open(linksList.linkedin);
+      case "gitHub":
+        return window.open(linksList.gitHub);
+      case "whatsapp":
+        return window.open(linksList.whatsapp);
+      default:
+        return window.open(linksList.gitHub);
+    }
+  }
+
   return (
     <FirstBlockWrapper>
       <ContentLimit>
@@ -27,15 +41,13 @@ const FirstBlock = (props) => {
           <Draw src={iconDraw} />
         </DrawWrapper>
         <SocialNetworks>
-          <IconWrapper href={linksList.gitHub}>
+          <IconWrapper onClick={() => openPage("gitHub")}>
             <GitHub />
           </IconWrapper>
-          <Link to="contact" smooth={true} duration={1100}>
             <IconWrapper>
-              <WhatsApp />
+              <WhatsApp onClick={() => openPage("whatsapp")}/>
             </IconWrapper>
-          </Link>
-          <IconWrapper href={linksList.linkedin}>
+          <IconWrapper onClick={() => openPage("linkedin")}>
             <Linkedin />
           </IconWrapper>
         </SocialNetworks>

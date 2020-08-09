@@ -26,12 +26,11 @@ export const SecondBlockWrapper = styled.div`
 export const Title = styled.span`
   width: 52%;
   font-size: ${textSize.l};
-  font-weight: 300;
+  font-weight: 500;
   text-align: center;
 
   @media ${device.mobileL} {
     font-size: ${textSize.m};
-    font-weight: 300;
   }
 
   
@@ -68,6 +67,7 @@ export const TextWrapper = styled.div`
 
   @media ${device.laptop} {
     width: 80%;
+    padding-left: 0;
   }
 `;
 
@@ -79,6 +79,7 @@ export const Picture = styled.img`
   max-width: 370px;
   min-width: 180px;
   border-radius: 4px;
+  border: 2px solid #ffff;
 
   @media ${device.laptop} {
     align-self: center;
@@ -93,7 +94,7 @@ export const AboutMeTitle = styled.span`
   justify-self: flex-start;
   width: 95%;
   font-size: ${textSize.xl};
-  font-weight: 500;
+  font-weight: 900;
   text-align: left;
 
   @media ${device.desktop} {
@@ -105,6 +106,7 @@ export const AboutMeTitle = styled.span`
     width: auto;
     align-self: center;
     justify-self: center;
+    text-align: center;
     padding-top: 20px;
     height: 40px;
   }
@@ -133,7 +135,7 @@ export const Text = styled.span`
   }
 
   @media ${device.mobileL} {
-    text-align: left;
+    text-align: center;
     align-self: flex-start;
     justify-self: flex-start;
     line-height: 1.6;
@@ -166,8 +168,9 @@ export const Technologies = styled.div`
   }
 
   @media ${device.mobileL} {
+    width: 30%;
     justify-content: flex-start;
-    align-self: flex-start;
+    align-self: center;
   }
 `;
 
@@ -187,10 +190,12 @@ export const CVButton = styled(Button)`
     align-self: flex-start;
     background-color: #006ba6;
     color: #ffff;
-    width: 100px;
+    width: 120px;
     height: 35px;
     border-radius: 10px;
     box-shadow: 2px 2px;
+    font-size: ${textSize.xs}; 
+    
     &:hover {
       background-color: #ffff;
       color: #006ba6;

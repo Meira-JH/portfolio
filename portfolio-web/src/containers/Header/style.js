@@ -117,9 +117,9 @@ export const Projects = styled.p`
   -webkit-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   &:hover {
-    border: 2px solid #8F2D56;
+    border: 2px solid #FFBC42;
     color: #ffff;
-    background-color: #8F2D56;
+    background-color: #FFBC42;
   }
   @media ${device.tablet} {
     display: none;

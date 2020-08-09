@@ -129,6 +129,7 @@ export const CVButton = styled(Button)`
     border-radius: 10px;
     box-shadow: 2px 2px;
     margin-top: 79px;
+    font-size: ${textSize.xs}; 
 
     &:hover {
       background-color: #006ba6;

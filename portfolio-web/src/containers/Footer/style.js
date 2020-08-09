@@ -59,30 +59,30 @@ export const Text = styled.span`
 
     @media ${device.tablet} {
         width: 90%
+        
     }
 `
 
 const animation = keyframes`
   0% { 
-    background-color: #ffff;
+    color: #ffff;
    }
   100% { 
-    background-color: #FFBC42;
+    color: #FFBC42;
    }
 `
 
-export const WhatsApp = styled.img`
-  background-color: #ffff;
-  mask: url(${iconWhatsApp});
-  mask-size: 90%;
-  mask-position: center;
-  mask-repeat: no-repeat;
-  width: ${textSize.m};
-  height: ${textSize.m};
-  margin-left: 15px;
+// export const WhatsApp = styled.img`
+//   background-color: #ffff;
+//   mask: url(${iconWhatsApp});
+//   mask-size: 90%;
+//   mask-position: center;
+//   mask-repeat: no-repeat;
+//   width: ${textSize.m};
+//   height: ${textSize.m};
+//   margin-left: 15px;
 
-  animation: ${animation} 2s infinite alternate ease-in-out;
-`;
+// `;
 
 export const Contact = styled.span`
     width: 50%;
@@ -91,12 +91,15 @@ export const Contact = styled.span`
     text-align: center;
     font-weight: 500;
     padding: 12px;
+
+    animation: ${animation} 2s infinite alternate ease-in-out;
+
 `
 
 export const IconsWrapper = styled.div`
-  width: 10%;
+  width: 18%;
   min-height: 40px;
-  min-width: 130px;
+  min-width: 150px;
   max-width: 300px;
   display: flex;
   align-items: center;
@@ -149,6 +152,28 @@ export const Linkedin = styled.img`
   }
 `;
 
+export const WhatsApp = styled.img`
+  background-color: #ffff;
+  mask: url(${iconWhatsApp});
+  mask-size: 90%;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  width: 3vw;
+  height: 3vw;
+  min-height: 40px;
+  min-width: 40px;
+  max-width: 50px;
+  cursor: pointer;
+
+  transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  &:hover {
+    background-color: #D81159;
+  }
+`;
+
 export const FinalTag = styled.div`
     display: flex;
     align-items: center;
@@ -160,4 +185,11 @@ export const FinalTag = styled.div`
 
 export const Copyright = styled.span`
     padding-left: 52px;
+
+    @media ${device.tablet} {
+      padding-left: 40px;
+    }
+    @media ${device.mobileL} {
+      padding-left: 20px;
+    }
 `

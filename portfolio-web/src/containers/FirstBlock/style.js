@@ -26,7 +26,7 @@ export const ContentLimit = styled.div`
 
 export const Title = styled.span`
   font-size: ${textSize.xl};
-  font-weight: 500;
+  font-weight: 600;
   padding: 10px 0;
   text-align: center;
 

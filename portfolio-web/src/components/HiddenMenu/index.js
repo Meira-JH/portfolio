@@ -84,21 +84,22 @@ export default function HiddenMenu(props) {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <StyledMenuItem className={classes.menuItem} >
-          <Link to="whoAmI" smooth={true} duration={600} onClick={handleClose}>
-            <ListItemText primary="Quem sou"/>
-          </Link>
-        </StyledMenuItem>
-        <StyledMenuItem>
-          <Link to="projects" smooth={true} duration={1000} onClick={handleClose}>
-            <ListItemText primary="Projetos"/>
-          </Link>
-        </StyledMenuItem>
-        <StyledMenuItem>
-          <Link to="contact" smooth={true} duration={1100} onClick={handleClose}>
-            <ListItemText primary="Vamos conversar?"/>
-          </Link>
-        </StyledMenuItem>
+        <Link to="whoAmI" smooth={true} duration={600} onClick={handleClose}>
+          <StyledMenuItem className={classes.menuItem}>
+            <ListItemText primary="Quem sou" />
+          </StyledMenuItem>
+        </Link>
+
+        <Link to="projects" smooth={true} duration={1000} onClick={handleClose}>
+          <StyledMenuItem>
+            <ListItemText primary="Projetos" />
+          </StyledMenuItem>
+        </Link>
+        <Link to="contact" smooth={true} duration={1100} onClick={handleClose}>
+          <StyledMenuItem>
+            <ListItemText primary="Vamos conversar?" />
+          </StyledMenuItem>
+        </Link>
       </StyledMenu>
     </div>
   );

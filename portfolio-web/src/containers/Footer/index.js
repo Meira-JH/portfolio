@@ -23,6 +23,8 @@ const Footer = (props) => {
         return window.open(linksList.linkedin);
       case "gitHub":
         return window.open(linksList.gitHub);
+      case "whatsapp":
+        return window.open(linksList.whatsapp);
       default:
         return window.open(linksList.gitHub);
     }
@@ -33,13 +35,10 @@ const Footer = (props) => {
       <ContentLimit>
         <Title> {footerTexto.opening} </Title>
         <Text> {footerTexto.closing} </Text>
-        <Contact> {footerTexto.email} </Contact>
-        <Contact>
-          {footerTexto.phone}
-          <WhatsApp />
-        </Contact>
+        <Text>E-mail para contato: <Contact>{footerTexto.email} </Contact></Text>
         <IconsWrapper>
           <GitHub onClick={() => openPage("gitHub")}/>
+          <WhatsApp onClick={() => openPage("whatsapp")}/>
           <Linkedin onClick={() => openPage("linkedin")}/>
         </IconsWrapper>
       </ContentLimit>

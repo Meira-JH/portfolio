@@ -242,13 +242,14 @@ export const DescriptionButton = styled(Button)`
     border-radius: 10px;
     box-shadow: 2px 2px;
     margin-top: ${textSize.s};
+    font-size: ${textSize.xs}; 
+
     &:hover {
       background-color: #0496FF;
       color: #ffff;
       font-weight: 900;
     }
     @media ${device.laptopL} {
-      height: 30px;
     }
     @media ${device.mobileL} {
       margin-top: 5px;
@@ -267,6 +268,7 @@ export const CVButton = styled(Button)`
     border-radius: 10px;
     box-shadow: 2px 2px;
     margin-top: 30px;
+    font-size: ${textSize.xs}; 
 
     &:hover {
       background-color: #ffff;
