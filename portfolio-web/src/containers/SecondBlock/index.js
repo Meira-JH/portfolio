@@ -13,8 +13,14 @@ import {
 } from "./style";
 import { whoAmI } from "../../Layout/Texts";
 import profilePic from "../../img/perfilLinkedin.png";
+import { linksList } from "../../util/externalLinks";
+
 
 const SecondBlock = (props) => {
+
+  function resumeDownload(){
+    window.open(linksList.resume)
+  }
   const technologies = [
     "React.js",
     "Node.js",
@@ -37,7 +43,7 @@ const SecondBlock = (props) => {
               <TechSpan key={index}> {tech} </TechSpan>
             ))}
           </Technologies>
-          <CVButton>CV em pdf</CVButton>
+          <CVButton onClick={resumeDownload}>CV em pdf</CVButton>
           </TextWrapper>
         </AboutMeWrapper>
     </SecondBlockWrapper>
