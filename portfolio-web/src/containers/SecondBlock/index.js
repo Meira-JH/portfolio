@@ -22,6 +22,7 @@ const SecondBlock = (props) => {
     window.open(linksList.resume)
   }
   const technologies = [
+    "JavaScript",
     "React.js",
     "Node.js",
     "Typescript",

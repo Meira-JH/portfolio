@@ -27,7 +27,7 @@ export const knowledge = {
   titleFrontEnd: "Front-end",
   titleBackEnd: "Back-end",
   textFrontEnd:
-    "Desenvolvimento de aplicações web em HTML, CSS e JavaScript. Criação de sites integrados por React-Redux, responsivos, com código limpo e testes (unitários e integração pela biblioteca JEST). Deploy de aplicações pelo Hosting do Google Firebase.",
+    "Desenvolvimento de aplicações web em HTML, CSS e JavaScript. Criação de sites integrados por React.js e Redux, responsivos, com código limpo e testes (unitários e integração pela biblioteca JEST). Deploy de aplicações pelo Hosting do Google Firebase.",
   textBackEnd:
     "Aplicações ambientadas em NodeJS e uso das linguagnes Typescript e MySQL. Familiaridade com as funcionalidades EC2, Cloud, S3 e Lambda da plataforma AWS e com as funcionalidades Firestore, DataBase, Authentication e Functions da plataforma Google Firebase.",
 };
