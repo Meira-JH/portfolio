@@ -12,11 +12,15 @@ export const HeaderWrapper = styled.header`
   background-color: rgb(255, 255, 255);
   position: static;
   z-index: 0;
+
+  @media ${device.laptopL}{
+    grid-template-areas: "LogoWrapper LogoWrapper . . ButtonWrapper ButtonWrapper ";
+  }
 `;
 
 export const LogoWrapper = styled.div`
   height: 100%;
-  width: 100%;
+  width: 90%;
   grid-area: LogoWrapper;
   display: flex;
   flex-direction: column;
@@ -24,6 +28,10 @@ export const LogoWrapper = styled.div`
   align-items: flex-start;
   justify-content: center;
   text-align: center;
+
+  @media ${device.laptopL}{
+    align-items: center;
+  }
 `;
 
 const animation = keyframes`
@@ -42,10 +50,14 @@ export const Name = styled.p`
   color: #0496FF;
   font-size: ${textSize.m};
   font-weight: 900;
-  padding: 4px 8px;
+  padding: 7px 5px 8px 15px;
   animation: ${animation} 4s infinite alternate ease-in-out;
 
   @media ${device.laptop} {
+    font-size: ${textSize.m};
+  }
+
+  @media ${device.tablet} {
     font-size: ${textSize.m};
     animation: none
   }
@@ -117,9 +129,9 @@ export const Projects = styled.p`
   -webkit-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   &:hover {
-    border: 2px solid #FFBC42;
+    border: 2px solid #8F2D56;
     color: #ffff;
-    background-color: #FFBC42;
+    background-color: #8F2D56;
   }
   @media ${device.tablet} {
     display: none;

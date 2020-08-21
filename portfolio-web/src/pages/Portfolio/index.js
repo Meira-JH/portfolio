@@ -15,8 +15,8 @@ const Portfolio = (props) => {
             <FirstBlock/>
             <SecondBlock/>
             <ThirdBlock />
-            <FourthBlock />
             <FifthBlock />
+            <FourthBlock />
             <Footer />
         </PortfolioWrapper>
     )

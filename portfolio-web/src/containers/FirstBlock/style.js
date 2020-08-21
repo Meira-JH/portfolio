@@ -31,7 +31,8 @@ export const Title = styled.span`
   text-align: center;
 
   @media ${device.tablet}{
-    font-size: ${textSize.l}
+    font-size: ${textSize.l};
+    padding: 10px 10px;
   }
 `;
 
