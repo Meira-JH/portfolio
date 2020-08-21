@@ -127,6 +127,13 @@ export const IconPhone = styled.img`
   min-height: 260px;
   box-shadow: 10px 10px 20px black;
   border-radius: 38px;
+
+  @media ${device.desktop}{
+    border-radius: 2vw;
+  }
+  @media ${device.laptop}{
+    border-radius: 26px;
+  }
 `;
 
 export const DescriptionRight = styled.div`
