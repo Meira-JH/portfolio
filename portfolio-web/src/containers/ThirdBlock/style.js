@@ -102,6 +102,7 @@ export const Icon = styled.img`
   width: ${textSize.xl};
   height: ${textSize.xl};
   padding: 5px;
+  font-size: auto;
 
   @media ${device.laptop}{
     width: ${textSize.l};

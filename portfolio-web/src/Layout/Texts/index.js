@@ -3,10 +3,11 @@ import iconUfv from "../../img/ufv.jpg";
 import iconLabenu from "../../img/labenu.png";
 
 export const textSize = {
+  xs: "15px",
   s: "19px",
-  m: "23px",
-  l: "30px",
-  xl: "49px",
+  m: "24px",
+  l: "31px",
+  xl: "50px",
   xxl: "79px",
 };
 
@@ -26,7 +27,7 @@ export const knowledge = {
   titleFrontEnd: "Front-end",
   titleBackEnd: "Back-end",
   textFrontEnd:
-    "Desenvolvimento de aplicações web em HTML, CSS e JavaScript. Criação de sites integrados por React-Redux, responsivos, com código limpo e testes (unitários e integração pela biblioteca JEST). Deploy de aplicações pelo Hosting do Google Firebase.",
+    "Desenvolvimento de aplicações web em HTML, CSS e JavaScript. Criação de sites integrados por React.js e Redux, responsivos, com código limpo e testes (unitários e integração pela biblioteca JEST). Deploy de aplicações pelo Hosting do Google Firebase.",
   textBackEnd:
     "Aplicações ambientadas em NodeJS e uso das linguagnes Typescript e MySQL. Familiaridade com as funcionalidades EC2, Cloud, S3 e Lambda da plataforma AWS e com as funcionalidades Firestore, DataBase, Authentication e Functions da plataforma Google Firebase.",
 };
@@ -71,7 +72,7 @@ export const education = [
     name: "Mestrado em Direito - UFMG",
     details: "2 anos",
     description:
-      "Mestrado em Direito pela Universidade Federal de Minas Gerais. Para além da defesa de dissertação, ajudei na organização e apoio de eventos e Congressos. Durante o curso publiquei 4 artigos, 2 livros e realizei algumas apresentações/comunicações.",
+      "Mestrado em Direito pela Universidade Federal de Minas Gerais. Para além da defesa de dissertação, ajudei na organização e apoio de eventos e Congressos. Durante o curso publiquei 4 artigos, 2 livros e realizei algumas apresentações.",
     icon: iconUfmg,
   },
 ];
@@ -79,6 +80,5 @@ export const education = [
 export const footerTexto = {
   opening: "Interessado em contratar?",
   closing: "Estou feliz com minha transição profissional e entusiasmado com a programação! Se você tiver uma oportunidade de trabalho que me ajude na evolução da carreira, entre em contato!",
-  email: "E-mail para contato: jhalvesmeira@gmail.com",
-  phone: "Celular: (031)98695-3169"
+  email: `jhalvesmeira@gmail.com`,
 };

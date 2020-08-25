@@ -6,7 +6,7 @@ import Button from "@material-ui/core/Button";
 export const FourthBlockWrapper = styled.div`
   height: auto;
   width: 100%;
-  background-color: #ffbc42;
+  background-color: #ffff;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -34,6 +34,7 @@ export const ProjectsWrapper = styled.div`
 `;
 
 export const Title = styled.span`
+  color: #006BA6;
   align-self: center;
   justify-self: center;
   width: 100%;
@@ -94,6 +95,7 @@ export const IconWrapperRight = styled.div`
   @media ${device.mobileL} {
     justify-content: center;
     padding-right: 0px;
+    padding-bottom: 20px;
   }
 `;
 
@@ -107,6 +109,7 @@ export const IconWrapperLeft = styled.div`
   @media ${device.mobileL} {
     justify-content: center;
     padding-left: 0px;
+    padding-bottom: 20px;
   }
 `;
 
@@ -114,12 +117,23 @@ export const Icon = styled.img`
   width: 30vw;
   max-width: 420px;
   min-width: 260px;
+  box-shadow: 10px 10px 20px black;
+  border-radius: 21px;
 `;
 
 export const IconPhone = styled.img`
   height: 25vw;
   max-height: 420px;
   min-height: 260px;
+  box-shadow: 10px 10px 20px black;
+  border-radius: 38px;
+
+  @media ${device.desktop}{
+    border-radius: 2vw;
+  }
+  @media ${device.laptop}{
+    border-radius: 26px;
+  }
 `;
 
 export const DescriptionRight = styled.div`
@@ -180,7 +194,7 @@ export const DescriptionSubTitleRight = styled.span`
   font-size: ${textSize.l};
   font-weight: 300;
   text-align: left;
-  color: #ffff;
+  color: #FFBC42;
   padding-bottom: 10px;
 
   @media ${device.laptopL} {
@@ -193,7 +207,7 @@ export const DescriptionSubTitleLeft = styled.span`
   font-size: ${textSize.l};
   font-weight: 300;
   text-align: right;
-  color: #ffff;
+  color: #FFBC42;
   padding-bottom: 10px;
 
   @media ${device.laptopL} {
@@ -235,20 +249,21 @@ export const DescriptionTextLeft = styled.span`
 
 export const DescriptionButton = styled(Button)`
   && {
-    background-color: #ffff;
-    color: #0496FF;
+    background-color: #FFBC42;
+    color: #22303d;
     width: 150px;
     height: 35px;
     border-radius: 10px;
     box-shadow: 2px 2px;
     margin-top: ${textSize.s};
+    font-size: ${textSize.xs}; 
+
     &:hover {
-      background-color: #0496FF;
-      color: #ffff;
+      background-color: #22303d;
+      color: #FFBC42;
       font-weight: 900;
     }
     @media ${device.laptopL} {
-      height: 30px;
     }
     @media ${device.mobileL} {
       margin-top: 5px;
@@ -260,17 +275,18 @@ export const CVButton = styled(Button)`
   && {
     grid-area: Botao;
     align-self: center;
-    background-color: #006ba6;
-    color: #ffff;
+    background-color: #22303d;
+    color: #FFBC42;
     width: 150px;
     height: 35px;
     border-radius: 10px;
     box-shadow: 2px 2px;
     margin-top: 30px;
+    font-size: ${textSize.xs}; 
 
     &:hover {
-      background-color: #ffff;
-      color: #006ba6;
+      background-color: #FFBC42;
+      color: #22303d;
       font-weight: 900;
     }
     @media ${device.laptopL} {

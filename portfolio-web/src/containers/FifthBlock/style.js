@@ -9,7 +9,7 @@ export const FifthBlockWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #485864;
+  background-color: #006BA6;
   padding: 49px 0 79px 0;
 
   @media ${device.laptop} {
@@ -64,7 +64,6 @@ export const Board = styled.div`
   min-height: 380px;
   height: auto;
   border-radius: 25px;
-  border: 3px double #cdd5d7;
 
   @media ${device.tablet} {
     max-width: none;
@@ -122,17 +121,18 @@ export const CVButton = styled(Button)`
   && {
     grid-area: Botao;
     align-self: center;
-    background-color: #ffff;
-    color: #006ba6;
+    background-color: #FFBC42;
+    color: #ffff;
     width: 100px;
     height: 35px;
     border-radius: 10px;
     box-shadow: 2px 2px;
     margin-top: 79px;
+    font-size: ${textSize.xs}; 
 
     &:hover {
-      background-color: #006ba6;
-      color: #ffff;
+      background-color: #ffff;
+      color: #FFBC42;
       font-weight: 900;
     }
     @media ${device.laptopL} {

@@ -26,12 +26,13 @@ export const ContentLimit = styled.div`
 
 export const Title = styled.span`
   font-size: ${textSize.xl};
-  font-weight: 500;
+  font-weight: 600;
   padding: 10px 0;
   text-align: center;
 
   @media ${device.tablet}{
-    font-size: ${textSize.l}
+    font-size: ${textSize.l};
+    padding: 10px 10px;
   }
 `;
 
