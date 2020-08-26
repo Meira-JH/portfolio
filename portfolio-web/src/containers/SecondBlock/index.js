@@ -15,11 +15,9 @@ import { whoAmI } from "../../Layout/Texts";
 import profilePic from "../../img/perfilLinkedin.png";
 import { linksList } from "../../util/externalLinks";
 
-
 const SecondBlock = (props) => {
-
-  function resumeDownload(){
-    window.open(linksList.resume)
+  function resumeDownload() {
+    window.open(linksList.resume);
   }
   const technologies = [
     "JavaScript",
@@ -33,10 +31,10 @@ const SecondBlock = (props) => {
 
   return (
     <SecondBlockWrapper id="whoAmI">
-        <Title>{whoAmI.title}</Title>
-        <AboutMeWrapper>
-          <Picture src={profilePic} />
-          <TextWrapper>
+      <Title>{whoAmI.title}</Title>
+      <AboutMeWrapper>
+        <Picture src={profilePic} />
+        <TextWrapper>
           <AboutMeTitle>Sobre mim</AboutMeTitle>
           <Text> {whoAmI.text} </Text>
           <Technologies>
@@ -45,8 +43,8 @@ const SecondBlock = (props) => {
             ))}
           </Technologies>
           <CVButton onClick={resumeDownload}>CV em pdf</CVButton>
-          </TextWrapper>
-        </AboutMeWrapper>
+        </TextWrapper>
+      </AboutMeWrapper>
     </SecondBlockWrapper>
   );
 };

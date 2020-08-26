@@ -9,7 +9,7 @@ import Footer from "../../containers/Footer";
 import ScrollTop from "react-scrolltop-button";
 import styled from "styled-components";
 
-const ScrollTopButtom = styled(ScrollTop)`
+const ScrollTopButton = styled(ScrollTop)`
 &&{
     background-color: rgb(255, 255, 255, 0.7);
     color: rgb(9, 107, 166, 0.7);
@@ -21,18 +21,17 @@ const ScrollTopButtom = styled(ScrollTop)`
     border-color: rgb(9, 107, 166, 1);
   }
 }
-
 `;
 
 const Portfolio = (props) => {
   return (
     <PortfolioWrapper>
-      <ScrollTopButtom
+      <ScrollTopButton
         text="para o início"
         distance={90}
         breakpoint={768}
         className="scroll-your-role"
-        speed={1200}
+        speed={800}
         target={0}
       />
       <FirstBlock />

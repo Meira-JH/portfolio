@@ -12,11 +12,7 @@ export const FourthBlockWrapper = styled.div`
   justify-content: flex-start;
   align-items: center;
   color: #ffff;
-  padding: 49px 0 79px 0;
-
-  @media ${device.laptop} {
-    padding: 30px 0 49px 0;
-  }
+  padding: 49px 0;
 `;
 
 export const ProjectsWrapper = styled.div`
@@ -34,7 +30,7 @@ export const ProjectsWrapper = styled.div`
 `;
 
 export const Title = styled.span`
-  color: #006BA6;
+  color: #006ba6;
   align-self: center;
   justify-self: center;
   width: 100%;
@@ -54,7 +50,7 @@ export const ProjectRight = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 79px 0;
+  padding: 49px 0;
 
   @media ${device.laptop} {
     width: 85%;
@@ -62,7 +58,7 @@ export const ProjectRight = styled.div`
 
   @media ${device.mobileL} {
     flex-direction: column;
-    padding: 30px 0;
+    padding: 49px 0;
   }
 `;
 
@@ -128,10 +124,10 @@ export const IconPhone = styled.img`
   box-shadow: 10px 10px 20px black;
   border-radius: 38px;
 
-  @media ${device.desktop}{
+  @media ${device.desktop} {
     border-radius: 2vw;
   }
-  @media ${device.laptop}{
+  @media ${device.laptop} {
     border-radius: 26px;
   }
 `;
@@ -171,7 +167,7 @@ export const DescriptionTitleRight = styled.span`
   font-weight: 700;
   text-align: left;
   color: #22303d;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
 
   @media ${device.laptopL} {
     font-size: ${textSize.l};
@@ -183,7 +179,7 @@ export const DescriptionTitleLeft = styled.span`
   font-weight: 700;
   text-align: right;
   color: #22303d;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
 
   @media ${device.laptopL} {
     font-size: ${textSize.l};
@@ -194,11 +190,12 @@ export const DescriptionSubTitleRight = styled.span`
   font-size: ${textSize.l};
   font-weight: 300;
   text-align: left;
-  color: #FFBC42;
+  color: #ffbc42;
   padding-bottom: 10px;
 
   @media ${device.laptopL} {
     padding-bottom: 5px;
+    font-weight: 500;
     font-size: ${textSize.m};
   }
 `;
@@ -207,25 +204,26 @@ export const DescriptionSubTitleLeft = styled.span`
   font-size: ${textSize.l};
   font-weight: 300;
   text-align: right;
-  color: #FFBC42;
+  color: #ffbc42;
   padding-bottom: 10px;
 
   @media ${device.laptopL} {
     padding-bottom: 5px;
+    font-weight: 500;
     font-size: ${textSize.m};
   }
 `;
 
 export const DescriptionTextRight = styled.span`
-  font-size: ${textSize.m};
+  font-size: ${textSize.s};
+  line-height: 1.5;
   font-weight: 100;
   text-align: left;
   color: #22303d;
 
-
   @media ${device.laptop} {
+    line-height: 1.4;
     padding: 1vw 0;
-    font-size: ${textSize.s};
   }
   @media ${device.tablet} {
     display: none;
@@ -233,15 +231,16 @@ export const DescriptionTextRight = styled.span`
 `;
 
 export const DescriptionTextLeft = styled.span`
-  font-size: ${textSize.m};
+  font-size: ${textSize.s};
+  line-height: 1.5;
   font-weight: 100;
-  text-align: right;
+  text-align: left;
   color: #22303d;
 
   @media ${device.laptop} {
-    font-size: ${textSize.s};
+    line-height: 1.4;
+    padding: 1vw 0;
   }
-
   @media ${device.tablet} {
     display: none;
   }
@@ -249,18 +248,18 @@ export const DescriptionTextLeft = styled.span`
 
 export const DescriptionButton = styled(Button)`
   && {
-    background-color: #FFBC42;
+    background-color: #ffbc42;
     color: #22303d;
     width: 150px;
     height: 35px;
     border-radius: 10px;
     box-shadow: 2px 2px;
     margin-top: ${textSize.s};
-    font-size: ${textSize.xs}; 
+    font-size: ${textSize.xs};
 
     &:hover {
       background-color: #22303d;
-      color: #FFBC42;
+      color: #ffbc42;
       font-weight: 900;
     }
     @media ${device.laptopL} {
@@ -276,16 +275,16 @@ export const CVButton = styled(Button)`
     grid-area: Botao;
     align-self: center;
     background-color: #22303d;
-    color: #FFBC42;
+    color: #ffbc42;
     width: 150px;
     height: 35px;
     border-radius: 10px;
     box-shadow: 2px 2px;
-    margin-top: 30px;
-    font-size: ${textSize.xs}; 
+    font-size: ${textSize.xs};
+    margin: 15px;
 
     &:hover {
-      background-color: #FFBC42;
+      background-color: #ffbc42;
       color: #22303d;
       font-weight: 900;
     }

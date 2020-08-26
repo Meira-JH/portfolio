@@ -19,7 +19,7 @@ export const FooterWrapper = styled.div`
 `
 
 export const ContentLimit = styled.div`
-    padding: 54px 0;
+    padding: 49px 0;
     width: 60%;
     height: 100%;
     display: flex;
@@ -51,7 +51,7 @@ export const Text = styled.span`
     font-size: ${textSize.s};
     font-weight: 100;
     text-align: center;
-    padding: 30px;
+    padding-top: 49px;
 
     @media ${device.laptop} {
         width: 85%
@@ -72,25 +72,12 @@ const animation = keyframes`
    }
 `
 
-// export const WhatsApp = styled.img`
-//   background-color: #ffff;
-//   mask: url(${iconWhatsApp});
-//   mask-size: 90%;
-//   mask-position: center;
-//   mask-repeat: no-repeat;
-//   width: ${textSize.m};
-//   height: ${textSize.m};
-//   margin-left: 15px;
-
-// `;
-
 export const Contact = styled.span`
     width: 50%;
     font-size: ${textSize.s};
     font-weight: 100;
     text-align: center;
     font-weight: 500;
-    padding: 12px;
 
     animation: ${animation} 2s infinite alternate ease-in-out;
 
@@ -103,7 +90,7 @@ export const IconsWrapper = styled.div`
   max-width: 300px;
   display: flex;
   align-items: center;
-  padding: 30px;
+  padding-top: 49px;
   justify-content: space-between;
 `
 

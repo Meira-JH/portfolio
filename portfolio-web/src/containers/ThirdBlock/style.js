@@ -11,12 +11,8 @@ export const ThirdBlockWrapper = styled.div`
   justify-content: flex-start;
   align-items: center;
   color: #006ba6;
-  padding: 49px 0 79px 0;
+  padding: 49px 0;
 
-  @media ${device.laptop} {
-    padding: 30px 0 49px 0;
-  }
-  
 `;
 
 export const KnowledgeWrapper = styled.div`
@@ -87,7 +83,7 @@ export const Technologies = styled.div`
   flex-wrap: wrap;
   justify-content: space-around;
   width: 35%;
-  margin-top: 20px;
+  margin-top: 49px;
 
   @media ${device.laptop} {
     width: 77%;

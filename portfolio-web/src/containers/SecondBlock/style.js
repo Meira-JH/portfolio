@@ -12,14 +12,14 @@ export const SecondBlockWrapper = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 49px 0 79px 0;
+  padding: 49px 0;
   color: white;
 
   @media ${device.laptop} {
     height: auto;
     max-height: none;
     min-height: 750px;
-    padding: 30px 0 49px 0;
+    padding: 49px 0;
   }
 `;
 
@@ -28,23 +28,20 @@ export const Title = styled.span`
   font-size: ${textSize.l};
   font-weight: 500;
   text-align: center;
+  padding-bottom: 49px;
 
   @media ${device.mobileL} {
     font-size: ${textSize.m};
   }
-
-  
 `;
 
 export const AboutMeWrapper = styled.div`
   width: 70%;
-  padding-top: 79px;
   display: flex;
   justify-content: center;
 
   @media ${device.laptopL} {
     width: 90%;
-    padding-top: 3vw;
   }
   @media ${device.laptop} {
     height: auto;
@@ -57,7 +54,9 @@ export const AboutMeWrapper = styled.div`
 `;
 
 export const TextWrapper = styled.div`
-  width: 35%;
+  width: 37vw;
+  max-width: 420px;
+  min-width: 180px;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -76,7 +75,7 @@ export const Picture = styled.img`
   align-self: flex-start;
   justify-self: flex-end;
   width: 37vw;
-  max-width: 370px;
+  max-width: 400px;
   min-width: 180px;
   border-radius: 4px;
   border: 2px solid #ffff;
@@ -119,7 +118,7 @@ export const Text = styled.span`
   width: 100%;
   font-size: ${textSize.s};
   font-weight: 50;
-  text-align: left;
+  text-align: justify;
   padding-top: 10px;
   line-height: 1.4;
 
@@ -194,8 +193,8 @@ export const CVButton = styled(Button)`
     height: 35px;
     border-radius: 10px;
     box-shadow: 2px 2px;
-    font-size: ${textSize.xs}; 
-    
+    font-size: ${textSize.xs};
+
     &:hover {
       background-color: #ffff;
       color: #006ba6;

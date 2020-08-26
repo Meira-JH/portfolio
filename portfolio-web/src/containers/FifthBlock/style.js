@@ -10,15 +10,12 @@ export const FifthBlockWrapper = styled.div`
   align-items: center;
   justify-content: center;
   background-color: #006BA6;
-  padding: 49px 0 79px 0;
+  padding: 49px 0;
 
-  @media ${device.laptop} {
-    padding: 30px 0 49px 0;
-  }
 `;
 
 export const Title = styled.span`
-  padding-bottom: 79px;
+  padding-bottom: 49px;
   color: #ffff;
   font-size: ${textSize.xl};
   font-weight: 300;
@@ -43,10 +40,6 @@ export const EducationWrapper = styled.div`
 
   @media ${device.laptop} {
     width: 98%;
-  }
-
-  @media ${device.tablet} {
-    width: 98%;
     flex-direction: column;
     align-items: center;
   }
@@ -59,13 +52,13 @@ export const Board = styled.div`
   align-items: flex-start;
   justify-content: flex-start;
   background-color: white;
-  max-width: 26%;
-  width: 380px;
+  width: 26%;
+  max-width: 380px;
   min-height: 380px;
   height: auto;
   border-radius: 25px;
 
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     max-width: none;
     width: 65%;
     align-items: center;
@@ -96,9 +89,10 @@ export const BoardSubTitle = styled.div`
   font-size: ${textSize.m};
   color: #8f2d56;
   font-weight: 100;
-  padding: 20px 0;
+  padding: 30px 0;
 
   @media ${device.laptop} {
+    font-weight: 500;
     font-size: ${textSize.s};
   }
 `;
@@ -110,7 +104,8 @@ export const BoardIcon = styled.img`
 
 export const BoardText = styled.div`
   width: 100%;
-  font-size: ${textSize.m};
+  line-height: 1.5;
+  font-size: ${textSize.s};
 
   @media ${device.laptop} {
     font-size: ${textSize.s};
@@ -127,7 +122,7 @@ export const CVButton = styled(Button)`
     height: 35px;
     border-radius: 10px;
     box-shadow: 2px 2px;
-    margin-top: 79px;
+    margin-top: 49px;
     font-size: ${textSize.xs}; 
 
     &:hover {
@@ -136,10 +131,6 @@ export const CVButton = styled(Button)`
       font-weight: 900;
     }
     @media ${device.laptopL} {
-      align-self: center;
-      margin-top: 49px;
-    }
-    @media ${device.laptop} {
       align-self: center;
     }
   }

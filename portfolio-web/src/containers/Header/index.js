@@ -30,7 +30,7 @@ const Header = (props) => {
         <Link to="projects" smooth={true} duration={1000}>
           <Projects>Projetos</Projects>
         </Link>
-        <Link to="contact" smooth={true} duration={1100}>
+        <Link to="contact" smooth={true} duration={1000}>
           <ContactMe>Vamos conversar?</ContactMe>
         </Link>
       </ButtonWrapper>
